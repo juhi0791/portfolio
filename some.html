@@ -1,0 +1,66 @@
+<!-- ko if: $component.shallOpenModal -->
+<div>
+    <div id="myModal" class="invite-modal-wrapper">
+
+        <div class="invite-modal-content">
+            <form data-bind="submit: $component.SendInviteEmail">
+                <div>
+                    <h3 class="invite-modal-header">Invite by email </h3>
+                    <div class="group">
+                        <span class="email-input-content inline-block" />
+                        <input class="input-common input-underline " type="text"
+                            data-bind="textInput:  $component.NewEmailAddress" required placeholder="Email address" />
+                        <span class="bar"></span>
+                        <p class="sub-text small-text"> Ex. jane.smith@abc.com, john.doe@abc.com </p>
+
+                    </div>
+                </div>
+                <div>
+                    <h3 class="invite-modal-header-secondary">Subject </h3>
+                    <p class="sub-text">Your friend is inviting you to The Invitational Team Steps Challenge</p>
+                </div>
+                <div class="EmailMessage-content">
+                    <h3 class="invite-modal-header-secondary">Email Message </h3>
+                    <p class="sub-text">
+                        I have signed up for the Invitational Team Steps Challenge and would like to
+                        invite you to join my team, the <span data-bind="text: Name" />
+                    </p>
+
+                    <p class="sub-text">
+                        You should have received an email about how to sign up to participate in this
+                        Challenge.
+                        During the sign up process, you can select to join a Team and search
+                        on the <span data-bind="text: Name" />
+                    </p>
+                    <p class="sub-text">
+                        Each team has 5 members on it, so sign up quickly, if you want to be on my
+                        team.
+                    </p>
+                </div>
+                <div class="group">
+
+                    <fieldset>
+                        <legend>Message</legend>
+                        <textarea rows="5" cols="60" maxlength="1000" data-bind="textInput:  $component.MessageText"
+                            placeholder="Type to further customize your message (optional) " />
+                        </fieldset>        
+            </div>
+            <div>
+                <p class="sub-text">Thanks,</p>
+                <div class="group signature-input">
+                        <input class="input-common input-underline signature-color" data-bind="textInput:  $component.SignatureName" type="text" placeholder="Your Name" maxlength="200" >
+                        <p class="sub-text small-text"> If you are using an alias, please use your real name</p>
+                       
+                        
+                </div>
+            </div>  
+            <div class="form-submit-wrapper">
+                            <button class="btn btn-padded-light btn-transparent font-18"  data-bind="click: $component.closeAlert">Cancel</button>
+                            <button class="btn btn-padded-light btn-transparent  font-18" type="submit">Send</button>
+
+            </div>
+        </form>
+        </div>
+    </div>
+</div>
+<!-- /ko -->
